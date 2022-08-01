@@ -57,17 +57,20 @@
             this.btnClr = new System.Windows.Forms.Button();
             this.btnAvg = new System.Windows.Forms.Button();
             this.btnPop = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(324, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(220, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
+            this.label1.Size = new System.Drawing.Size(292, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Student Result Sheet";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // label2
             // 
@@ -305,11 +308,34 @@
             this.btnPop.UseVisualStyleBackColor = true;
             this.btnPop.Click += new System.EventHandler(this.btnPop_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(183, 149);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 20);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Subjects";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(359, 149);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 20);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Grades";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(686, 450);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnPop);
             this.Controls.Add(this.btnClr);
             this.Controls.Add(this.btnAvg);
@@ -377,5 +403,7 @@
         private Button btnClr;
         private Button btnAvg;
         private Button btnPop;
+        private Label label11;
+        private Label label12;
     }
 }

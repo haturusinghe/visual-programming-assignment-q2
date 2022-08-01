@@ -7,11 +7,6 @@ namespace Assignment_ResultSheet
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             gradeSinhala.Text = getGrade(inSinhala.Text);
@@ -47,7 +42,7 @@ namespace Assignment_ResultSheet
           
         }
 
-        private int getTotal()
+        private float getTotalMarks()
         {
             int maths = int.Parse(inMath.Text);
             int english = int.Parse(inEng.Text);
@@ -55,19 +50,19 @@ namespace Assignment_ResultSheet
             int sinhala = int.Parse(inSinhala.Text);
             int history = int.Parse(inHistory.Text);
 
-            int total = maths + english + science + sinhala + history;
+            float total = maths + english + science + sinhala + history;
             return total;
         }
 
         private float getAverage()
         {
-            return getTotal() / 5;
+            return getTotalMarks() / 5.0f;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             
-            disTotal.Text = getTotal().ToString();
+            disTotal.Text = getTotalMarks().ToString();
         }
 
         private void btnAvg_Click(object sender, EventArgs e)
@@ -94,7 +89,7 @@ namespace Assignment_ResultSheet
 
         private void btnPop_Click(object sender, EventArgs e)
         {
-            string message = "Student Name: " + inName.Text + ", Student Number: " + inNumber.Text + ", Total: " + getTotal() + ", Average: " + getAverage() + ".";
+            string message = "Student Name: " + inName.Text + ", Student Number: " + inNumber.Text + ", Total: " + getTotalMarks() + ", Average: " + getAverage() + ".";
             string title = "Student Results Report!";
             MessageBox.Show(message, title);
         }
